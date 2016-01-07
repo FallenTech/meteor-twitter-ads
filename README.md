@@ -1,9 +1,12 @@
 # Twitter Ads API
-Wrapper package for [Twitter Ads API](https://github.com/FallenTech/twitter-ads).
+
+[![Build Status](https://travis-ci.org/FallenTech/meteor-twitter-ads.png?branch=master)](https://travis-ci.org/FallenTech/meteor-twitter-ads)
+
+Wrapper Meteor package for [Twitter Ads API](https://github.com/FallenTech/twitter-ads) NPM package.
 
 ### Add package
 
-    meteor add sparaker:twitter-ads
+    meteor add fallentech:twitter-ads
     
 
 On the `server`
