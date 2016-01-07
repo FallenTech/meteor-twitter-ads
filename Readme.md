@@ -51,4 +51,3 @@ you should get something similar to this:
 ```
 
 See the full docs [here](https://github.com/FallenTech/twitter-ads).
-
