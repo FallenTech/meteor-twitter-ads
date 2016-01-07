@@ -11,7 +11,7 @@ Npm.depends({'twitter-ads': '0.0.9'});
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.addFiles('twitter-ads-api.js');
+  api.addFiles('twitter-ads-api.js', ['server']);
   api.export('TwitterAdsAPI', ['server']);
 });
 
