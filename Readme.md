@@ -12,6 +12,7 @@ Wrapper Meteor package for [Twitter Ads API](https://github.com/FallenTech/twitt
 On the `server`
 
 ```js
+// Notice you don't need to add the keyword new, it will always be a new object.
 var T = TwitterAdsAPI({
   consumer_key: 'XXX',
   consumer_secret: 'XXX',
@@ -21,7 +22,7 @@ var T = TwitterAdsAPI({
 
 var result = T.get('accounts/:account_id', {account_id: 'XXX'});
 
-console.log(result.body);
+console.log(result.twitterBody);
 /* If everything goes okay,
 you should get something similar to this:
 
@@ -45,6 +46,9 @@ you should get something similar to this:
     }
   }  
 */
+
+// You can also make use of the cool ES6 feature:
+var {twitterResp, twitterBody} = T.get('accounts/:account_id', {account_id: 'XXX'});
 
 /* Use T.get, T.post, T.put and T.delete
    refer to Twitter API docs for the details on call parameters. */

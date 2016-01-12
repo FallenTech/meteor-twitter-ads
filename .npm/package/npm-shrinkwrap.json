@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "twitter-ads": {
-      "version": "0.0.9",
+      "version": "0.1.0",
       "dependencies": {
         "request": {
           "version": "2.67.0",
@@ -47,7 +47,7 @@
               "version": "1.0.0-rc3",
               "dependencies": {
                 "async": {
-                  "version": "1.5.1"
+                  "version": "1.5.2"
                 }
               }
             },
@@ -95,7 +95,7 @@
                   }
                 },
                 "sshpk": {
-                  "version": "1.7.2",
+                  "version": "1.7.3",
                   "dependencies": {
                     "asn1": {
                       "version": "0.2.3"
@@ -104,7 +104,7 @@
                       "version": "0.2.0"
                     },
                     "dashdash": {
-                      "version": "1.11.0",
+                      "version": "1.12.1",
                       "dependencies": {
                         "assert-plus": {
                           "version": "0.1.5"

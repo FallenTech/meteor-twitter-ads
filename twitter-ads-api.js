@@ -12,9 +12,9 @@ TwitterAdsAPI = function TwitterAdsAPI(options) {
         cb = params;
         params = {};
       }
-      twitterAdsClient['_' + k](url, params, function(err, resp, body) {
+      twitterAdsClient['_' + k](url, params, function(err, twitterResp, twitterBody) {
         if (err) return cb(err);
-        return cb(null, {resp, body});
+        return cb(null, {twitterResp, twitterBody});
       });
     });
     
