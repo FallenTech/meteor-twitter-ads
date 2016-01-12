@@ -12,7 +12,7 @@ Wrapper Meteor package for [Twitter Ads API](https://github.com/FallenTech/twitt
 On the `server`
 
 ```js
-// Notice you don't need to add the keyword new, it will always be a new object.
+// Notice you don't need to add the keyword new, it will always be a new instance.
 var T = TwitterAdsAPI({
   consumer_key: 'XXX',
   consumer_secret: 'XXX',

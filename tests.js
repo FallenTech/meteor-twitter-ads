@@ -5,5 +5,5 @@ Tinytest.add('Instantiation', function (test) {
     access_token: 'XXX',
     access_token_secret: 'XXX'
   });
-  test.instanceOf(T, Npm.require('twitter-ads'), 'Instantiation OK');
+  test.instanceOf(T, TwitterAdsAPIInstance, 'Instantiation OK');
 });

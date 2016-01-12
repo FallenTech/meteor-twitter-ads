@@ -1,5 +1,8 @@
 var _TwitterAdsAPI = Npm.require('twitter-ads');
 
+// Expose main instance to check against
+TwitterAdsAPIInstance = _TwitterAdsAPI;
+
 TwitterAdsAPI = function TwitterAdsAPI(options) {
   var twitterAdsClient = new _TwitterAdsAPI(options),
       toWrap = ['get', 'put', 'post', 'delete'];
