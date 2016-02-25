@@ -1,12 +1,12 @@
 Package.describe({
   name: 'fallentech:twitter-ads',
   summary: 'Wraps twitter-ads npm package for Meteor',
-  version: '0.1.2',
+  version: '0.1.3',
   git: 'https://github.com/FallenTech/meteor-twitter-ads',
   documentation: 'README.md'
 });
 
-Npm.depends({'twitter-ads': '0.1.2'});
+Npm.depends({'twitter-ads': '0.1.3'});
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
