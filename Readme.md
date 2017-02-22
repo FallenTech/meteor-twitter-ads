@@ -59,7 +59,7 @@ var {twitterResp, twitterBody} = T.get('accounts/:account_id', {account_id: 'XXX
 T.tonUpload({
     file: './test.txt',
     content_type: 'text/plain',
-    bucket: 'ta_partner'
+    bucket_name: 'ta_partner'
   },
   function(error, location) {
     if (error) return console.error(error);
