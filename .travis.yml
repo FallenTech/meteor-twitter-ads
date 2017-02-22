@@ -1,21 +1,16 @@
-sudo: false
- 
+sudo: required
 language: node_js
- 
+node_js:
+  - "0.10"
+  
 before_install:
-  - curl https://install.meteor.com | /bin/sh
-  - export PATH="$HOME/.meteor:$PATH"
- 
-cache:
-  directories:
-    - node_modules
- 
-before_script:
-  - meteor npm install
- 
-script:
-  - meteor npm run gulp
-  - meteor remove practicalmeteor:mocha
-  - meteor add dispatch:mocha-phantomjs
-  - meteor test --once --driver-package dispatch:mocha-phantomjs
-  - meteor build $HOME/build.tgz
+  - "curl -L http://git.io/ejPSng | /bin/sh"
+
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
