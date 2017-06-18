@@ -10,15 +10,28 @@ TwitterAdsAPI = function TwitterAdsAPI(options) {
   
   baseToWrap.forEach(function(k) {
     twitterAdsClient['_' + k] = twitterAdsClient[k].bind(twitterAdsClient);
-    twitterAdsClient[k] = Meteor.wrapAsync(function(url, params, cb) {
-      if (typeof params == 'function') {
+    twitterAdsClient[k] = Meteor.wrapAsync(function(url, params, body, cb) {
+      if (typeof params === 'function') {
         cb = params;
         params = {};
+        body = undefined;
       }
-      twitterAdsClient['_' + k](url, params, function(err, twitterResp, twitterBody) {
-        if (err) return cb(err);
-        return cb(null, {twitterResp, twitterBody});
-      });
+      if (typeof body === 'function') {
+        cb = body;
+        body = undefined;
+      }
+      
+      if (k === 'put' || k === 'post') {
+        twitterAdsClient['_' + k](url, params, body, function(err, twitterResp, twitterBody) {
+          if (err) return cb(err);
+          return cb(null, {twitterResp, twitterBody});
+        });
+      } else {
+        twitterAdsClient['_' + k](url, params, function(err, twitterResp, twitterBody) {
+          if (err) return cb(err);
+          return cb(null, {twitterResp, twitterBody});
+        });
+      }
     });
   });
   
